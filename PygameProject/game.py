@@ -13,31 +13,31 @@ class Game:
         self.game_window = pygame.display.set_mode((self.width, self.height))
         self.clock = pygame.time.Clock()
 
-        self.background = GameObject(0, 0, self.width, self.height, 'Python/PygameProject/assets/background.png')
+        self.background = GameObject(0, 0, self.width, self.height, 'PygameProject/assets/background.png')
 
-        self.treasure = GameObject(375, 50, 50, 50, 'Python/PygameProject/assets/treasure.png')
+        self.treasure = GameObject(375, 50, 50, 50, 'PygameProject/assets/treasure.png')
 
         self.level = 1.0
         
         self.reset_map()
         
     def reset_map(self):
-        self.player = Player(375, 700, 50, 50, 'Python/PygameProject/assets/player.png', 10)
+        self.player = Player(375, 700, 50, 50, 'PygameProject/assets/player.png', 10)
         speed = 5 + (self.level * 5)
         if self.level >= 4.0:
             self.enemies = [
-                Enemy(50, 500, 50, 50, 'Python/PygameProject/assets/enemy.png', speed - 3),
-                Enemy(750, 300, 50, 50, 'Python/PygameProject/assets/enemy.png', speed +2),
-                Enemy(0, 150, 50, 50, 'Python/PygameProject/assets/enemy.png', speed -5),
+                Enemy(50, 500, 50, 50, 'PygameProject/assets/enemy.png', speed - 3),
+                Enemy(750, 300, 50, 50, 'PygameProject/assets/enemy.png', speed +2),
+                Enemy(0, 150, 50, 50, 'PygameProject/assets/enemy.png', speed -5),
         ]
         elif self.level >= 2.0:
             self.enemies = [
-                Enemy(50, 500, 50, 50, 'Python/PygameProject/assets/enemy.png', speed - 3),
-                Enemy(750, 300, 50, 50, 'Python/PygameProject/assets/enemy.png', speed +2),
+                Enemy(50, 500, 50, 50, 'PygameProject/assets/enemy.png', speed - 3),
+                Enemy(750, 300, 50, 50, 'PygameProject/assets/enemy.png', speed +2),
         ]
         else:
             self.enemies = [
-                Enemy(50, 500, 50, 50, 'Python/PygameProject/assets/enemy.png', speed - 5),
+                Enemy(50, 500, 50, 50, 'PygameProject/assets/enemy.png', speed - 5),
         ]
         
     #Tell the system to draw in the objects
